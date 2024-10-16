@@ -6,7 +6,13 @@ footer {
     align-items: center;
     gap: 10px;
 
+    & img {
+        width: 30px;
+
+    }
+
     & span {
         color: white;
     }
+
 }
