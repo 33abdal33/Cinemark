@@ -1,4 +1,4 @@
-@import "../public/Styles/color.css";
+@import "../public/Styles/colors.css";
 @import "../public/Styles/material.css";
 
 html,
@@ -9,4 +9,8 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.box-shadow {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
