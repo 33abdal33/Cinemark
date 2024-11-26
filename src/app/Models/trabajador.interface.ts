@@ -1,10 +1,10 @@
 import { Boleta } from "./boleta.interface";
 
 export interface Trabajador{
-    IdTrabajador: number;
-    Nombre: string;
-    Apellido: string;
-    Usuario: string;
-    Contraseña: string;
-    Boleta: Boleta[];
+    idTrabajador: number;
+    nombre: string;
+    apellido: string;
+    usuario: string;
+    contraseña: string;
+    boleta: Boleta[];
 }

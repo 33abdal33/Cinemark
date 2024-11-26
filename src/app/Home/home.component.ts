@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { ChangeDetectorRef, Component, OnInit } from "@angular/core";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "../shared/components/footer/footer.component";
 import { MatSelectModule } from '@angular/material/select';
@@ -18,7 +18,10 @@ import { Trabajador } from "../Models/trabajador.interface";
 export class HomeComponent implements OnInit {
   trabajadorList: Trabajador[] = [];
 
-  constructor(private trabajadorService: TrabajadorService) {}
+  constructor(
+    private trabajadorService: TrabajadorService,
+    private cdr: ChangeDetectorRef  // Inyecta ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     this.getTrabajadores();
