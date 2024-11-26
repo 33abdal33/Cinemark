@@ -22,6 +22,27 @@
             <app-event-card></app-event-card>
             <app-event-card></app-event-card>
         </section>
+        
+        <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Usuario</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of trabajadorList; let i = index">
+                  <td class="row">{{ item.IdTrabajador }}</td>
+                  <td class="row">{{ item.Nombre }}</td>
+                  <td class="row">{{ item.Apellido }}</td>
+                  <td class="row">{{ item.Usuario }}</td>
+                </tr>
+              </tbody>
+              
+          </table>
+          
     </div>
     <app-footer></app-footer>
 </div>
