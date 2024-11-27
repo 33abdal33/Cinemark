@@ -39,14 +39,5 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-
-  // Función para iniciar sesión
-  IniciarSesion(): void {
-    // Lógica para iniciar sesión
-  }
-
-  // Función para registrar un trabajador
-  Registrarse(): void {
-    // Lógica para registrar un trabajador
-  }
+  
 }
