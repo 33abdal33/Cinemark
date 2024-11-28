@@ -26,7 +26,6 @@ header {
                 color: white;
                 font-weight: 500;
                 margin-bottom: 0;
-
             }
         }
 
@@ -41,12 +40,49 @@ header {
             display: flex;
             gap: 20px;
 
-            & .primary {
-                color: var(--primary-color);
+            & button {
+                padding: 10px 20px;
+                border: none;
+                /* Sin borde */
+                border-radius: 50px;
+                /* Bordes completamente redondeados */
+                background-color: transparent;
+                /* Fondo transparente */
+                color: white;
+                /* Color de texto blanco */
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                outline: none;
+                /* Evitar el borde por defecto al hacer foco */
             }
 
+            /* Estilo para el botón primary */
+            & .primary {
+                background-color: var(--primary-color);
+            }
+
+            & .primary:hover {
+                box-shadow: 0 0 10px 5px rgba(0, 123, 255, 0.6);
+                /* Sombra azul al pasar el ratón */
+                background-color: var(--primary-color);
+                /* Mantiene el color */
+            }
+
+            /* Estilo para el botón accent */
             & .accent {
-                color: var(--accent-color);
+                background-color: var(--accent-color);
+            }
+
+            & .tercer {
+                background-color: var(--tercer-color);
+            }
+
+            & .accent:hover {
+                box-shadow: 0 0 10px 5px rgba(255, 87, 34, 0.6);
+                /* Sombra anaranjada al pasar el ratón */
+                background-color: var(--accent-color);
+                /* Mantiene el color */
             }
         }
     }
