@@ -3,7 +3,7 @@
     height: 360px;
     display: flex;
     flex-direction: column;
-    background-color: var(--secondary-color);
+    background-color: var(--tercer-color);
     color: white;
     border-radius: 8px;
 

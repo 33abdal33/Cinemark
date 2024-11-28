@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<div class="movie-form-container">
+    <h2>Agregar Película</h2>
+    <form class="movie-form" (ngSubmit)="onRegister()">
+        <!-- Título de la Película -->
+        <div class="form-group">
+            <label for="movieTitle">Título de la Película</label>
+            <input type="text" id="movieTitle" [(ngModel)]="titulo" name="titulo" placeholder="Título de la película"
+                required>
+        </div>
+
+        <!-- Género de la Película -->
+        <div class="form-group">
+            <label for="movieGenre">Género</label>
+            <select id="movieGenre" [(ngModel)]="genero" name="genero" required>
+                <option value="accion">Acción</option>
+                <option value="comedia">Comedia</option>
+                <option value="drama">Drama</option>
+                <option value="terror">Terror</option>
+                <option value="romance">Romance</option>
+            </select>
+        </div>
+
+        <!-- Duración de la Película -->
+        <div class="form-group">
+            <label for="movieDuration">Duración</label>
+            <input type="text" id="movieDuration" [(ngModel)]="duracion" name="duracion"
+                placeholder="Duración de la película" required>
+        </div>
+
+        <!-- Clasificación de la Película -->
+        <div class="form-group">
+            <label for="movieRating">Clasificación</label>
+            <input type="text" id="movieRating" [(ngModel)]="clasificacion" name="clasificacion"
+                placeholder="Clasificación (Ej. A, B, C, etc.)" required>
+        </div>
+
+        <!-- Sinopsis de la Película -->
+        <div class="form-group">
+            <label for="movieSynopsis">Sinopsis</label>
+            <textarea id="movieSynopsis" [(ngModel)]="sinopsis" name="sinopsis"
+                placeholder="Breve descripción de la película" required></textarea>
+        </div>
+
+        <!-- Botón para Agregar Película -->
+        <button type="submit" class="btn-submit">Agregar Película</button>
+    </form>
+</div>
+
+<app-footer></app-footer>

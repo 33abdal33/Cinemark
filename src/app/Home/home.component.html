@@ -1,27 +1,22 @@
 <div class="home-container">
-    <app-header></app-header>
-    <div class="content-container">
-        <section class="filter">
-            <mat-form-field>
-                <mat-label>Genero</mat-label>
-                <mat-select>
-                    <mat-option value="">Terror</mat-option>
-                    <mat-option value="">Comedia</mat-option>
-                    <mat-option value="">Drama</mat-option>
-                </mat-select>
-            </mat-form-field>
-            <span>Selecciona tu género favorito</span>
-        </section>
-        <section class="event-list">
-            <app-event-card></app-event-card>
-            <app-event-card></app-event-card>
-            <app-event-card></app-event-card>
-            <app-event-card></app-event-card>
-            <app-event-card></app-event-card>
-            <app-event-card></app-event-card>
-            <app-event-card></app-event-card>
-            <app-event-card></app-event-card>
-        </section>
-    </div>
-    <app-footer></app-footer>
+  <app-header></app-header>
+  <div class="content-container">
+    <section class="filter">
+      <mat-form-field>
+        <mat-label>Genero</mat-label>
+        <mat-select>
+          <mat-option value="">Terror</mat-option>
+          <mat-option value="">Comedia</mat-option>
+          <mat-option value="">Drama</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <span>Selecciona tu género favorito</span>
+    </section>
+
+    <section class="event-list">
+
+      <app-event-card *ngFor="let pelicula of peliculas" [pelicula]="pelicula"></app-event-card>
+    </section>
+  </div>
+  <app-footer></app-footer>
 </div>

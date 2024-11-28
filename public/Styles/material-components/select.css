@@ -6,7 +6,7 @@
     --mat-option-selected-state-label-text-color: white;
     --mat-select-enable-arrow-color: var(--primary-color);
     --mat-select-focused-arrow-color: white;
-    --mdc-filled-text-field-container-color: var(--secondary-color);
+    --mdc-filled-text-field-container-color: var(--tercer-color);
     --mdc-filled-text-field-focus-label-text-color: var(--primary-color);
     --mdc-filled-text-field-label-text-color: var(--primary-color);
     --mdc-filled-text-field-focus-active-indicator-color: var(--primary-color);

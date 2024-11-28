@@ -45,44 +45,43 @@ header {
                 border: none;
                 /* Sin borde */
                 border-radius: 50px;
-                /* Bordes completamente redondeados */
+                /* Bordes redondeados */
                 background-color: transparent;
                 /* Fondo transparente */
                 color: white;
-                /* Color de texto blanco */
+                /* Texto blanco */
                 font-size: 16px;
                 cursor: pointer;
                 transition: all 0.3s ease;
+                /* Efecto suave para el sombreado */
                 outline: none;
-                /* Evitar el borde por defecto al hacer foco */
+                /* Sin borde al hacer foco */
             }
 
-            /* Estilo para el botón primary */
+            /* Botón primary */
             & .primary {
                 background-color: var(--primary-color);
             }
 
+            /* Efecto al pasar el ratón sobre el botón primary */
             & .primary:hover {
-                box-shadow: 0 0 10px 5px rgba(0, 123, 255, 0.6);
-                /* Sombra azul al pasar el ratón */
+                box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
+                /* Sombra azul alrededor */
                 background-color: var(--primary-color);
-                /* Mantiene el color */
+                /* Mantiene el fondo */
             }
 
-            /* Estilo para el botón accent */
+            /* Botón accent */
             & .accent {
                 background-color: var(--accent-color);
             }
 
-            & .tercer {
-                background-color: var(--tercer-color);
-            }
-
+            /* Efecto al pasar el ratón sobre el botón accent */
             & .accent:hover {
-                box-shadow: 0 0 10px 5px rgba(255, 87, 34, 0.6);
-                /* Sombra anaranjada al pasar el ratón */
+                box-shadow: 0 0 12px rgba(255, 87, 34, 0.6);
+                /* Sombra naranja alrededor */
                 background-color: var(--accent-color);
-                /* Mantiene el color */
+                /* Mantiene el fondo */
             }
         }
     }
