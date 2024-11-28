@@ -1,0 +1,88 @@
+header {
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: center;
+    height: 80px;
+
+    & .container {
+        width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+            & img {
+                width: 50px;
+                height: 50px;
+            }
+
+            & h1 {
+                font-size: 16px;
+                color: white;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+        }
+
+        & .search-bar {
+            width: 400px;
+            height: 30px;
+            border-radius: 8px;
+            padding-left: 10px;
+        }
+
+        & .buttons-container {
+            display: flex;
+            gap: 20px;
+
+            & button {
+                padding: 10px 20px;
+                border: none;
+                /* Sin borde */
+                border-radius: 50px;
+                /* Bordes redondeados */
+                background-color: transparent;
+                /* Fondo transparente */
+                color: white;
+                /* Texto blanco */
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                /* Efecto suave para el sombreado */
+                outline: none;
+                /* Sin borde al hacer foco */
+            }
+
+            /* Botón primary */
+            & .primary {
+                background-color: var(--primary-color);
+            }
+
+            /* Efecto al pasar el ratón sobre el botón primary */
+            & .primary:hover {
+                box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
+                /* Sombra azul alrededor */
+                background-color: var(--primary-color);
+                /* Mantiene el fondo */
+            }
+
+            /* Botón accent */
+            & .accent {
+                background-color: var(--accent-color);
+            }
+
+            /* Efecto al pasar el ratón sobre el botón accent */
+            & .accent:hover {
+                box-shadow: 0 0 12px rgba(255, 87, 34, 0.6);
+                /* Sombra naranja alrededor */
+                background-color: var(--accent-color);
+                /* Mantiene el fondo */
+            }
+        }
+    }
+}
