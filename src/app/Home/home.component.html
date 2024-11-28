@@ -14,34 +14,9 @@
     </section>
 
     <section class="event-list">
-      <app-event-card></app-event-card>
-      <app-event-card></app-event-card>
-      <app-event-card></app-event-card>
-      <app-event-card></app-event-card>
-      <app-event-card></app-event-card>
-      <app-event-card></app-event-card>
-      <app-event-card></app-event-card>
-      <app-event-card></app-event-card>
-    </section>
 
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Usuario</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of trabajadorList; let i = index">
-          <td class="row">{{ item.idTrabajador }}</td>
-          <td class="row">{{ item.nombre }}</td>
-          <td class="row">{{ item.apellido }}</td>
-          <td class="row">{{ item.usuario }}</td>
-        </tr>
-      </tbody>
-    </table>
+      <app-event-card *ngFor="let pelicula of peliculas" [pelicula]="pelicula"></app-event-card>
+    </section>
   </div>
   <app-footer></app-footer>
 </div>

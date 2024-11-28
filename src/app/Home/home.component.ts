@@ -4,40 +4,35 @@ import { FooterComponent } from "../shared/components/footer/footer.component";
 import { MatSelectModule } from '@angular/material/select';
 import { EventCardComponent } from "../shared/components/event-card/event-card.component";
 import { CommonModule } from '@angular/common';
-import { TrabajadorService } from "../services/trabajador.service";
-import { Trabajador } from "../Models/trabajador.interface";
+import { Pelicula } from "../Models/pelicula.interface";
+import { PeliculaService } from "../services/pelicula.service";
+import { SimpleHeaderComponent } from "../shared/components/simple-header/simple-header.component";
+import { FormsModule } from "@angular/forms";
 
 @Component({
-    selector: 'app-home',
-    standalone: true,
-    imports: [HeaderComponent, FooterComponent, MatSelectModule, EventCardComponent, CommonModule],
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  standalone: true,
+  imports: [
+    SimpleHeaderComponent,
+    FooterComponent,
+    CommonModule,
+    FormsModule,
+    EventCardComponent,
+    HeaderComponent,
+    MatSelectModule
+  ],
+  styleUrls: ['./home.component.scss']
 })
-
 export class HomeComponent implements OnInit {
-  trabajadorList: Trabajador[] = [];
+  peliculas: Pelicula[] = [];  // Array para almacenar las películas
 
-  constructor(
-    private trabajadorService: TrabajadorService,
-    private cdr: ChangeDetectorRef  // Inyecta ChangeDetectorRef
-  ) {}
+  constructor(private peliculaService: PeliculaService, private changeDetectorRef: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-    this.getTrabajadores();
-  }
-
-  getTrabajadores(): void {
-    this.trabajadorService.AllTrabajadores().subscribe({
-      next: (data) => {
-        console.log('Datos recibidos de la API:', data);
-        this.trabajadorList = data; // Asigna los datos a la lista de trabajadores
-        console.log('TrabajoList', this.trabajadorList);
-      },
-      error: (err) => {
-        console.error('Error al obtener trabajadores:', err);
-      }
+    this.peliculaService.AllPeliculas().subscribe((peliculas) => {
+      this.peliculas = peliculas;
+      this.changeDetectorRef.detectChanges();  // Detecta cambios si es necesario
     });
   }
-  
 }

@@ -1,22 +1,22 @@
-<div class="container box-shadow">
+<div class="container box-shadow" (click)="onCardClick()"> 
     <section class="superior">
-        <div class="date-time-container">
-            <span class="date">16 de noviembre 2024</span>
-            <span class="time">7:00 PM</span>
-        </div>
-        <div class="genre-container">
-            <span>TERROR</span>
-        </div>
+      <div class="date-time-container">
+        <span class="time">7:00 PM</span> <!-- Ejemplo fijo o ajustable -->
+      </div>
+      <div class="genre-container">
+        <span>{{ pelicula?.genero }}</span> <!-- Género de la película -->
+      </div>
     </section>
     <section class="middle">
-        <img src="Images/vengadores-6657516213bd5.jpg" alt="event image" />
+      <img src="Images/vengadores-6657516213bd5.jpg" alt="event image" />
     </section>
     <section class="bottom">
-        <div class="description-container">
-            <span>Estreno de Marvel, no te lo pierdas</span>
-        </div>
-        <div class="place-container">
-            <span>CC CINEMARK - LIMA</span>
-        </div>
+      <div class="description-container">
+        <span>{{ pelicula?.sinopsis }}</span> <!-- Sinopsis de la película -->
+      </div>
+      <div class="place-container">
+        <span>CC CINEMARK - LIMA</span> <!-- Lugar fijo o dinámico -->
+      </div>
     </section>
-</div>
+  </div>
+  

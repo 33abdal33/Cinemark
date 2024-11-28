@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Trabajador } from '../Models/trabajador.interface';
 import { TrabajadorService } from '../services/trabajador.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private trabajadorService: TrabajadorService) {}
+  constructor(private trabajadorService: TrabajadorService, private router: Router) {}
 
   onLogin(): void {
     if (this.username.trim() && this.password.trim()) {
@@ -32,7 +33,7 @@ export class LoginComponent {
         usuario: this.username,
         contraseña: this.password,
         boleta: []
-        
+
         // Agrega otros campos requeridos si son obligatorios en tu modelo
       };
 
@@ -40,6 +41,7 @@ export class LoginComponent {
         response => {
           console.log('Inicio de sesión exitoso', response);
           // Aquí podrías manejar el éxito, guardar tokens o redirigir
+          this.router.navigate(['/home']);
         },
         error => {
           console.error('Error al iniciar sesión', error);
@@ -50,5 +52,10 @@ export class LoginComponent {
       console.error('Los campos de usuario y contraseña son obligatorios.');
       alert('Por favor completa todos los campos.');
     }
+  }
+
+  goToRegister(): void {
+    // Redirige a la página de registro (register)
+    this.router.navigate(['/register']);
   }
 }
