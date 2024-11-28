@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ClienteService } from '../services/cliente.service';
 import { Cliente } from '../Models/cliente.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-regis-cliente',
@@ -19,7 +20,7 @@ export class RegisClienteComponent {
   email: string = '';
   telefono: string = '';
 
-  constructor(private clienteService: ClienteService) {}
+  constructor(private clienteService: ClienteService, private router: Router) {}
 
   onRegister(): void {
     if (!this.nombre.trim() || !this.apellido.trim() || !this.email.trim() || !this.telefono.trim()) {
@@ -54,5 +55,9 @@ export class RegisClienteComponent {
     this.apellido = '';
     this.email = '';
     this.telefono = '';
+  }
+
+  goToHome(): void {
+    this.router.navigate(['/home']);
   }
 }

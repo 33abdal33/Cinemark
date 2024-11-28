@@ -1,15 +1,49 @@
-.asientos-container {
-    text-align: center;
-    padding: 20px;
+/* Estilos globales */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
+  /* Contenedor principal */
+  .asientos-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
+  }
+  
+  /* Header */
+  app-simple-header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Footer */
+  app-footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Empuja el footer al final */
+  }
+  
+  /* Contenido principal */
   .asientos-box {
+    flex: 1; /* Permite que el contenedor de los asientos ocupe el espacio restante entre el header y el footer */
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
     padding: 20px;
+    text-align: center;
     border-radius: 10px;
   }
   
+  /* Grid de asientos */
   .seats-grid {
     display: grid;
     grid-template-columns: repeat(5, 50px); /* 5 columnas */
@@ -18,6 +52,7 @@
     margin: 20px 0;
   }
   
+  /* Estilos para asientos */
   .seat {
     width: 50px;
     height: 50px;
@@ -40,6 +75,7 @@
     transform: scale(1.05);
   }
   
+  /* Botones de acción */
   .action-buttons {
     margin-top: 20px;
   }

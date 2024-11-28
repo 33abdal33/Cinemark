@@ -1,69 +1,71 @@
 <div class="register-container">
-    <!-- Header -->
-    <app-simple-header></app-simple-header>
-  
-    <!-- Formulario de Registro -->
-    <div class="register-box">
-      <h2>Registrar Cliente</h2>
-      <form (ngSubmit)="onRegister()">
-        <!-- Nombre -->
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            [(ngModel)]="nombre"
-            name="nombre"
-            placeholder="Ingresa el nombre del cliente"
-            required
-          />
-        </div>
-  
-        <!-- Apellido -->
-        <div class="form-group">
-          <label for="apellido">Apellido</label>
-          <input
-            type="text"
-            id="apellido"
-            [(ngModel)]="apellido"
-            name="apellido"
-            placeholder="Ingresa el apellido del cliente"
-            required
-          />
-        </div>
-  
-        <!-- Email -->
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            [(ngModel)]="email"
-            name="email"
-            placeholder="Ingresa el email del cliente"
-            required
-          />
-        </div>
-  
-        <!-- Teléfono -->
-        <div class="form-group">
-          <label for="telefono">Teléfono</label>
-          <input
-            type="text"
-            id="telefono"
-            [(ngModel)]="telefono"
-            name="telefono"
-            placeholder="Ingresa el teléfono del cliente"
-            required
-          />
-        </div>
-  
-        <!-- Botón de Registro -->
-        <button type="submit" class="btn-register">Registrar Cliente</button>
-      </form>
-    </div>
-  
-    <!-- Footer -->
-    <app-footer></app-footer>
+  <!-- Header con navegación -->
+  <app-simple-header></app-simple-header>
+
+  <!-- Formulario de Registro -->
+  <div class="register-box">
+    <h2>Registrar Cliente</h2>
+    <form (ngSubmit)="onRegister()">
+      <!-- Nombre -->
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          [(ngModel)]="nombre"
+          name="nombre"
+          placeholder="Ingresa el nombre del cliente"
+          required
+        />
+      </div>
+
+      <!-- Apellido -->
+      <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input
+          type="text"
+          id="apellido"
+          [(ngModel)]="apellido"
+          name="apellido"
+          placeholder="Ingresa el apellido del cliente"
+          required
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="Ingresa el email del cliente"
+          required
+        />
+      </div>
+
+      <!-- Teléfono -->
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input
+          type="text"
+          id="telefono"
+          [(ngModel)]="telefono"
+          name="telefono"
+          placeholder="Ingresa el teléfono del cliente"
+          required
+        />
+      </div>
+
+      <!-- Botón de Registro -->
+      <button type="submit" class="btn-register">Registrar Cliente</button>
+    </form>
+      <p class="register-link">
+      <a (click)="goToHome()">Go to Home</a>
+    </p>
   </div>
-  
+
+  <!-- Footer -->
+  <app-footer></app-footer>
+</div>

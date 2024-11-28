@@ -49,7 +49,7 @@ export class RegisterComponent {
       apellido: this.apellido,
       usuario: this.username,
       contraseña: this.password,
-      boleta: []  // Si tienes más campos en tu modelo, agréguelos aquí
+      boleta: []
     };
 
     // Llamar al servicio para registrar al trabajador

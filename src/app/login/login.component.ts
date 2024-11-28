@@ -41,7 +41,7 @@ export class LoginComponent {
         response => {
           console.log('Inicio de sesión exitoso', response);
           // Aquí podrías manejar el éxito, guardar tokens o redirigir
-          this.router.navigate(['/home']);
+          this.router.navigate(['/regis-cliente']);
         },
         error => {
           console.error('Error al iniciar sesión', error);

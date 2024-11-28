@@ -83,4 +83,20 @@
     background-color: #b20710;
     transform: scale(1.05);
   }
-  
+  /* Register Link */
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ffcccb;
+}
+
+.register-link a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #ffcccb;
+}
