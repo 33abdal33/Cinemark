@@ -3,12 +3,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Aseguramos que los elementos principales estén alineados al principio */
+  justify-content: flex-start;
   min-height: 100vh;
-  background: #ffffff; /* Fondo blanco */
-  color: black; /* Texto en negro por contraste */
+  background: black;
+  /* Fondo negro */
+  color: white;
+  /* Texto blanco para buen contraste */
   font-family: 'Arial', sans-serif;
-  padding-bottom: 50px; /* Espacio adicional para el footer */
+  padding-bottom: 50px;
+  /* Espacio adicional para el footer */
 }
 
 /* Header and Footer */
@@ -16,25 +19,31 @@ app-simple-header,
 app-footer {
   width: 100%;
   flex-shrink: 0;
-  position: relative; /* Para asegurar que no se solapen con el contenido */
+  position: relative;
+  /* Para asegurar que no se solapen con el contenido */
 }
 
 /* Login Box */
 .login-box {
   width: 100%;
-  max-width: 500px; /* Más ancho */
-  padding: 40px; /* Más espacio interior */
-  background: rgba(0, 0, 0, 0.9); /* Fondo negro */
-  border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  max-width: 500px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.85);
+  /* Fondo más oscuro pero no opaco */
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  /* Sombra más suave */
   text-align: center;
-  margin: 40px auto; /* Centrado vertical y horizontal, con margen superior para no estar pegado al header */
+  margin: 40px auto;
+  border: 2px solid #ffcccb;
+  /* Agregar borde de color suave */
 }
 
 /* Título */
 h2 {
   margin-bottom: 20px;
-  color: #ffcccb; /* Rojo suave */
+  color: #ffcccb;
+  /* Rojo suave */
   font-family: 'Helvetica', sans-serif;
   font-weight: bold;
 }
@@ -56,7 +65,8 @@ label {
 input {
   width: 100%;
   padding: 12px;
-  border: none;
+  border: 2px solid #ffcccb;
+  /* Bordes suaves en el campo de entrada */
   border-radius: 5px;
   font-size: 16px;
   background: #f0f0f0;
@@ -114,6 +124,7 @@ input:focus {
   width: 100%;
   height: 100%;
   background: url('https://example.com/cinema-background.jpg') no-repeat center center/cover;
-  opacity: 0.1; /* Más tenue */
+  opacity: 0.15;
+  /* Más tenue para no opacar el contenido */
   z-index: -1;
 }

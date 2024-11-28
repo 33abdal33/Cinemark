@@ -5,12 +5,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Trabajador } from '../Models/trabajador.interface';
 import { TrabajadorService } from '../services/trabajador.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [SimpleHeaderComponent, FooterComponent, CommonModule, FormsModule],
+  imports: [SimpleHeaderComponent, FooterComponent, CommonModule, FormsModule, RouterLink],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
@@ -25,7 +25,7 @@ export class RegisterComponent {
   constructor(
     private trabajadorService: TrabajadorService,
     private router: Router
-  ) {}
+  ) { }
 
   onRegister(): void {
     // Validación de campos vacíos
