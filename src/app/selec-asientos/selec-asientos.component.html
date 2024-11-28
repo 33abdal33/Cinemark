@@ -1,25 +1,23 @@
 <div class="asientos-container">
-    <app-simple-header></app-simple-header>
-  
-    <div class="asientos-box">
-      <h2>Selecciona tus asientos</h2>
-      <p>Película: {{ peliculaId }}</p> <!-- Muestra el ID de la película o el nombre -->
-  
-      <div class="seats-grid">
-        <!-- Simulación de asientos -->
-        <div class="seat" *ngFor="let seat of seats" 
-             [class.selected]="seat.selected"
-             (click)="toggleSeat(seat)">
-          {{ seat.number }}
-        </div>
-      </div>
-  
-      <div class="action-buttons">
-        <button class="btn" (click)="confirmSeats()">Confirmar</button>
-        <button class="btn cancel" (click)="cancel()">Cancelar</button>
+
+  <app-header></app-header>
+  <div class="asientos-box">
+    <h2>Selecciona tus asientos</h2>
+    <p>Película: {{ peliculaId }}</p> <!-- Muestra el ID de la película o el nombre -->
+
+    <div class="seats-grid">
+      <!-- Simulación de asientos -->
+      <div class="seat" *ngFor="let seat of seats" [class.selected]="seat.selected" (click)="toggleSeat(seat)">
+        {{ seat.number }}
       </div>
     </div>
-  
-    <app-footer></app-footer>
+
+    <div class="action-buttons">
+      <button class="btn" (click)="confirmSeats()">Confirmar</button>
+      <button class="btn cancel" (click)="cancel()">Cancelar</button>
+
+    </div>
   </div>
-  
+
+  <app-footer></app-footer>
+</div>

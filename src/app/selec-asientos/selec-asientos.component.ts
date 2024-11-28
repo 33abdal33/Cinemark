@@ -4,11 +4,13 @@ import { SimpleHeaderComponent } from '../shared/components/simple-header/simple
 import { FooterComponent } from '../shared/components/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+
 
 @Component({
   selector: 'app-asientos',
   standalone: true,
-  imports: [SimpleHeaderComponent, FooterComponent, CommonModule, FormsModule],
+  imports: [SimpleHeaderComponent, FooterComponent, CommonModule, FormsModule, HeaderComponent],
   templateUrl: './selec-asientos.component.html',
   styleUrls: ['./selec-asientos.component.scss']
 })
@@ -16,7 +18,7 @@ export class SelecAsientosComponent implements OnInit {
   peliculaId!: number; // Variable para almacenar el ID de la película
   seats: { number: number; selected: boolean }[] = []; // Lista de asientos
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     // Obtener el parámetro 'peliculaId' de la URL
