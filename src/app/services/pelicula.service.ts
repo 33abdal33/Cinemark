@@ -12,7 +12,7 @@ export class PeliculaService {
   private http = inject(HttpClient);
   private API_URL: string = appsettings.apiURL + 'Pelicula';
 
-  constructor() {}
+  constructor() { }
 
   // Obtener todas las películas
   AllPeliculas() {
@@ -22,5 +22,8 @@ export class PeliculaService {
   // Obtener película por ID
   GetbyID(id: number) {
     return this.http.get<Pelicula>(`${this.API_URL}/${id}`);
+  }
+  RegistrarPelicula(pelicula: Pelicula) {
+    return this.http.post<Pelicula>(`${this.API_URL}/agregar`, pelicula);
   }
 }
